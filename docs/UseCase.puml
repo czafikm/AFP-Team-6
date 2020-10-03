@@ -18,21 +18,20 @@ rectangle "restaurant"{
 }
 
 rectangle "reception"{
- usecase "check in" as uc6
- usecase "attach watch to bill" as uc7
- usecase "close and print bill" as uc8
- usecase "pay bill" as uc9
+ usecase "attach watch to bill" as uc6
+ usecase "close and print bill" as uc7
+ usecase "pay bill" as uc8
 }
 
+rec-->uc6
 rec-->uc7
-rec-->uc8
 g1-->uc1
 g1-->uc2
 g1-->uc3
 g1-->uc4
 g1-->uc5
-g1-->uc6
-g1-->uc9
+g1-->uc8
 g2-->uc2
 g2-->uc4
+g2-->uc5
 @enduml
