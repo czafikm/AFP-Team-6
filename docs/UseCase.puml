@@ -1,0 +1,38 @@
+@startuml
+:receptionist: as rec
+:adult guest: as g1
+:kid guest: as g3
+
+
+rectangle bar{
+ usecase "buy alcohol" as uc1
+ usecase "buy alcoholfree drink" as uc2
+}
+rectangle "wellness section"{
+ usecase "use sauna" as uc3
+ usecase "use swimmingpool" as uc4
+}
+
+rectangle "restaurant"{
+ usecase "buy food" as uc5
+}
+
+rectangle "reception"{
+ usecase "check in" as uc6
+ usecase "attach watch to bill" as uc7
+ usecase "close and print bill" as uc8
+ usecase "pay bill" as uc9
+}
+
+rec-->uc7
+rec-->uc8
+g1-->uc1
+g1-->uc2
+g1-->uc3
+g1-->uc4
+g1-->uc5
+g1-->uc6
+g1-->uc9
+g2-->uc2
+g2-->uc4
+@enduml
