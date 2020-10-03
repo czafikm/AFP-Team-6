@@ -1,7 +1,7 @@
 @startuml
 :receptionist: as rec
 :adult guest: as g1
-:kid guest: as g3
+:kid guest: as g2
 
 
 rectangle bar{
