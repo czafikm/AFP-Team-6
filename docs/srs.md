@@ -2,7 +2,36 @@
 
 ## Desired system
 
-Ide jöhet a szoftver részletesebb leírása (az egyes funkciók mit is tudnak kicsit bővebben, felhasználók jogosultságai srb) a Use Case alapján.
+A *recepciós* tud zárni és számlát nyomtatni , meglévő számlát tud csatolni az órához a recepciónál.
+
+A *felnőtt* a számlát fizeti a recepciónál, szaunát használhat, úszómedencét használhat a wellness részlegnél, 	
+alkoholos-alkolmentes italt tud vásárolni a bárból, ételt tud venni az étteremből.
+
+A *gyerek* használni tudja az úszómedencét a wellness részlegen,csak alkolmentes italt tud vásárolni a bárból, 		
+ételt tud venni az étteremből. 
+
+Az alábbi felsorolás a fentebb leírtakat szemlélteti: 
+
+**Recepció:**
+		
+- Zárás és számla nyomtatás (close and print bill): - *Recepciós*	
+- Meglévő számla csatolása az órához (attach bill): - *Recepciós*	
+- Kifizeti a számlát (pay bill): - *Felnőtt*
+	
+__Wellness részleg:__
+
+- Szauna használat (use sauna) : - *Felnőtt*				
+- Úszómedence használata (use swimmingpool): - *Felnőtt, Gyerek*	
+
+__Bár:__
+
+- Alkoholos ital vásárlás(buy alcohol): - *Felnőtt* 			
+- Alkoholmentes ital vásárlás(buy non alcohol drink): - *Felnőtt,Gyerek*
+
+__Étterem:__		
+
+- Étel-t tud venni(buy food): - *Felnőtt,Gyerek*
+
 
 ## Function list
 
