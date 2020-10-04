@@ -20,17 +20,17 @@ Az alábbi felsorolás a fentebb leírtakat szemlélteti:
 	
 __Wellness részleg:__
 
-- Szauna használat (use sauna) : - *Felnőtt*				
-- Úszómedence használata (use swimmingpool): - *Felnőtt, Gyerek*	
+- Szauna használat (use sauna): - *Felnőtt*				
+- Úszómedence használata (use swimmingpool): - *Felnőtt , Gyerek*	
 
 __Bár:__
 
-- Alkoholos ital vásárlás(buy alcohol): - *Felnőtt* 			
-- Alkoholmentes ital vásárlás(buy non alcohol drink): - *Felnőtt,Gyerek*
+- Alkoholos ital vásárlás (buy alcohol): - *Felnőtt* 			
+- Alkoholmentes ital vásárlás (buy non alcohol drink): - *Felnőtt , Gyerek*
 
 __Étterem:__		
 
-- Étel-t tud venni(buy food): - *Felnőtt,Gyerek*
+- Étel-t tud venni (buy food): - *Felnőtt , Gyerek*
 
 
 ## Function list
