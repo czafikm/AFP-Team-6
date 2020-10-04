@@ -2,13 +2,13 @@
 
 ## Desired system
 
-A *recepciós* tud zárni és számlát nyomtatni , meglévő számlát tud csatolni az órához a recepciónál.
+A *recepciós* tud zárni és számlát nyomtatni , meglévő számlát tud csatolni az órához a **recepció**nál.
 
-A *felnőtt* a számlát fizeti a recepciónál, szaunát használhat, úszómedencét használhat a wellness részlegnél, 	
-alkoholos-alkolmentes italt tud vásárolni a bárból, ételt tud venni az étteremből.
+A *felnőtt* a számlát fizeti a **recepció**nál, szaunát használhat, úszómedencét használhat a **wellness részleg**nél, 	
+alkoholos-alkolmentes italt tud vásárolni a **bár**ból, ételt tud venni az **étterem**ből.
 
-A *gyerek* használni tudja az úszómedencét a wellness részlegen,csak alkolmentes italt tud vásárolni a bárból, 		
-ételt tud venni az étteremből. 
+A *gyerek* használni tudja az úszómedencét a **wellness részleg**en,csak alkolmentes italt tud vásárolni a **bár**ból, 		
+ételt tud venni az **étterem**ből. 
 
 Az alábbi felsorolás a fentebb leírtakat szemlélteti: 
 
