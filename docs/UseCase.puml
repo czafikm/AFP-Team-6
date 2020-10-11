@@ -1,37 +1,36 @@
 @startuml
-:receptionist: as rec
-:adult guest: as g1
-:kid guest: as g2
+left to right direction
 
+rectangle reception{
+(set clock details)
+(reset clock balance)
+(pay bill)
+}
 
+rectangle buy_something{
+rectangle restaurant{
+(buy food)
+}
 rectangle bar{
- usecase "buy alcohol" as uc1
- usecase "buy alcoholfree drink" as uc2
+(buy alcohol)
+(buy alcohol free drink)
 }
-rectangle "wellness section"{
- usecase "use sauna" as uc3
- usecase "use swimmingpool" as uc4
 }
 
-rectangle "restaurant"{
- usecase "buy food" as uc5
+rectangle use_services{
+rectangle welness{
+(use sauna)
+(use swimmingpool)
+}
 }
 
-rectangle "reception"{
- usecase "attach watch to bill" as uc6
- usecase "close and print bill" as uc7
- usecase "pay bill" as uc8
-}
-
-rec-->uc6
-rec-->uc7
-g1-->uc1
-g1-->uc2
-g1-->uc3
-g1-->uc4
-g1-->uc5
-g1-->uc8
-g2-->uc2
-g2-->uc4
-g2-->uc5
+:receptionist:-->(set clock details)
+:receptionist:-->(reset clock balance)
+:adult:-->buy_something
+:adult:-->use_services
+:adult:-->(pay bill)
+(buy alcohol)<..:kid::forbidden
+(use sauna)<..:kid::forbidden
+buy_something<--:kid:
+use_services<--:kid:
 @enduml
