@@ -4,13 +4,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>hu.uni.eku.tzs</groupId>
+  <groupId>AFP-Team-6</groupId>
   <artifactId>backend</artifactId>
   <version>1.0.21-SNAPSHOT</version>
 
   <name>backend</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>https://github.com/czafikm/AFP-Team-6</url>
 
   <properties>
     <github.global.server>github</github.global.server>
