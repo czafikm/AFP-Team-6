@@ -1,19 +1,17 @@
 package hu.uni.eku.tzs.controller;
 
-import hu.uni.eku.tzs.dao.WatchDao;
-import hu.uni.eku.tzs.dao.entity.Watch;
+import hu.uni.eku.tzs.controller.dto.WatchDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.*;
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.NoSuchElementException;
+import java.util.UUID;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/watch")
@@ -23,7 +21,36 @@ import java.util.NoSuchElementException;
 
 public class WatchController {
 
-    private final WatchDao service;
+    private Collection<WatchDto> watches = new ArrayList<>();
+    @GetMapping(value = {"/list"}, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    @ApiOperation(value = "List all watch")
+    public Collection<WatchDto> watchDetails() {
+        return watches.stream().map(watch ->
+                WatchDto.builder()
+                        .id(watch.getId())
+                        .balance(watch.getBalance())
+                        .build()
+        ).collect(Collectors.toList());
+    }
+    @PostMapping(value = "/record")
+    @ApiOperation(value = "Record a watch")
+    public void createWatch()
+    {
+        WatchDto newWatch = WatchDto.builder()
+                .id(UUID.randomUUID().toString())
+                .balance(0)
+                .build();
+        watches.add(newWatch);
+
+    }
+    @DeleteMapping(value = {"/delete/{id}"})
+    @ApiOperation(value = "Delete watch")
+    public void deleteWatch(@PathVariable String id) {
+        watches.removeIf(watch -> watch.getId().equals(id));
+    }
+
+    /*private final WatchDao service;
 
     @GetMapping(value = "/list",produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "watchlist")
@@ -69,4 +96,5 @@ public class WatchController {
         }
     }
 
+     */
 }
