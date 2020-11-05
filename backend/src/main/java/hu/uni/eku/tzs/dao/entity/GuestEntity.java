@@ -10,15 +10,18 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-
-public class Watch {
+@Table(name = "guest")
+public class GuestEntity
+{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column
-    private String guestName;
+    private String firstName;
+    @Column
+    private String lastName;
     @Column
     private byte guestAge;
     @Column
-    private int balance;
+    private String email;
 }

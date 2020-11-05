@@ -1,16 +1,20 @@
 package hu.uni.eku.tzs.controller;
 
 import hu.uni.eku.tzs.controller.dto.WatchDto;
+import hu.uni.eku.tzs.controller.dto.WatchRecordRequestDto;
+import hu.uni.eku.tzs.model.Watch;
+import hu.uni.eku.tzs.service.WatchService;
+import hu.uni.eku.tzs.service.exceptions.WatchAlreadyExistException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 @RestController
@@ -21,80 +25,39 @@ import java.util.stream.Collectors;
 
 public class WatchController {
 
-    private Collection<WatchDto> watches = new ArrayList<>();
+    private final WatchService service;
+
+    @PostMapping(value = "/record")
+    @ApiOperation(value = "Record watch")
+    public void record(@RequestBody WatchRecordRequestDto request) {
+        log.info("Recording new Watch ({},{})", request.getBalance(), request.getPaymentStatus());
+        try {
+            service.record(new Watch(
+                    0,
+                    request.getBalance(),
+                    request.getPaymentStatus()
+            ));
+        } catch (WatchAlreadyExistException e) {
+            log.info("Watch ({},{}) is already exists! Message: {}", request.getBalance(), request.getPaymentStatus(), e.getMessage());
+            throw new ResponseStatusException(
+                    HttpStatus.CONFLICT,
+                    e.getMessage()
+            );
+        }
+    }
+
     @GetMapping(value = {"/list"}, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    @ApiOperation(value = "List all watch")
-    public Collection<WatchDto> watchDetails() {
-        return watches.stream().map(watch ->
-                WatchDto.builder()
-                        .id(watch.getId())
-                        .balance(watch.getBalance())
-                        .build()
-        ).collect(Collectors.toList());
-    }
-    @PostMapping(value = "/record")
-    @ApiOperation(value = "Record a watch")
-    public void createWatch()
-    {
-        WatchDto newWatch = WatchDto.builder()
-                .id(UUID.randomUUID().toString())
-                .balance(0)
-                .build();
-        watches.add(newWatch);
+    @ApiOperation(value= "Watch list")
+    public Collection<WatchDto> query() {
+
+        return service.readAll().stream().map(model ->
+               WatchDto.builder()
+                .id(model.getId())
+        .balance(model.getBalance())
+        .paymentStatus(model.getPaymentStatus())
+        .build()).collect(Collectors.toList());
 
     }
-    @DeleteMapping(value = {"/delete/{id}"})
-    @ApiOperation(value = "Delete watch")
-    public void deleteWatch(@PathVariable String id) {
-        watches.removeIf(watch -> watch.getId().equals(id));
-    }
 
-    /*private final WatchDao service;
-
-    @GetMapping(value = "/list",produces = MediaType.APPLICATION_JSON_VALUE)
-    @ApiOperation(value = "watchlist")
-    public Collection<Watch> listAll(){
-            return service.readAll();
-    }
-
-    @GetMapping(value = "/list/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
-    @ApiOperation(value = "watchListId")
-    public ResponseEntity<Watch> getWatchById(@PathVariable Integer id) {
-        Watch watch = service.getById(id);
-        return new ResponseEntity<>(watch, HttpStatus.OK);
-    }
-
-    @PostMapping(value = "/add",produces = MediaType.APPLICATION_JSON_VALUE)
-    @ApiOperation(value = "watchAdd")
-    public void add(@RequestBody Watch watch) {
-        service.create(watch);
-    }
-
-    @PutMapping("/update/{id}")
-    public ResponseEntity<Watch> update(@RequestBody Watch watch,@PathVariable Integer id)
-    {
-        try
-        {
-            Watch existProduct = service.getById(id);
-            service.create(watch);
-            return new ResponseEntity<>(HttpStatus.OK);
-        }
-        catch (NoSuchElementException e)
-        {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public String delete(@PathVariable Integer id) throws Exception {
-        try {
-            service.delete(id);
-            return "You are successfully deleted watch with " + id;
-        } catch (Exception e) {
-            throw new Exception("Dont exist watch with " + id);
-        }
-    }
-
-     */
 }

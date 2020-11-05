@@ -1,17 +1,15 @@
-package hu.uni.eku.tzs.controller.dto;
+package hu.uni.eku.tzs.model;
 
-import hu.uni.eku.tzs.model.PaymentStatus;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class WatchRecordRequestDto {
-
+public class Watch
+{
+    private int id;
     private int balance;
     private PaymentStatus paymentStatus;
 }

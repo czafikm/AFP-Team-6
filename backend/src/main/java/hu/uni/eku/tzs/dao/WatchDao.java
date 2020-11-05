@@ -1,7 +1,6 @@
 package hu.uni.eku.tzs.dao;
 
-import hu.uni.eku.tzs.dao.entity.Watch;
-
+import hu.uni.eku.tzs.model.Watch;
 import java.util.Collection;
 
 public interface WatchDao {
@@ -10,9 +9,9 @@ public interface WatchDao {
 
     Collection<Watch> readAll();
 
-    void update(Watch watch);
+    void update(Watch original, Watch updated);
 
-    void delete(Integer id);
+    void delete(Watch watch);
 
-    Watch getById (Integer id);
+    Watch findById (int id);
 }

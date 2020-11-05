@@ -10,6 +10,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GuestRecordRequestDto {
-    private String name;
-    private byte age;
+
+    private String firstName;
+    private String lastName;
+    private byte guestAge;
+    private String email;
 }

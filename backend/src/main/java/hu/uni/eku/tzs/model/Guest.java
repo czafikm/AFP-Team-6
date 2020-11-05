@@ -1,16 +1,17 @@
-package hu.uni.eku.tzs.controller.dto;
+package hu.uni.eku.tzs.model;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-@Builder
-public class GuestDto {
-
+@NoArgsConstructor
+@AllArgsConstructor
+public class Guest
+{
     private int id;
     private String firstName;
     private String lastName;
     private byte guestAge;
     private String email;
-
 }

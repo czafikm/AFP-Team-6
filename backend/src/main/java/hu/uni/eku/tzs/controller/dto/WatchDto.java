@@ -1,13 +1,15 @@
 package hu.uni.eku.tzs.controller.dto;
 
+import hu.uni.eku.tzs.model.PaymentStatus;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
 public class WatchDto {
-    private String id ;
+
+    private int id;
     private int balance;
-    //private GuestDto guestDto;
+    private PaymentStatus paymentStatus;
 
 }
