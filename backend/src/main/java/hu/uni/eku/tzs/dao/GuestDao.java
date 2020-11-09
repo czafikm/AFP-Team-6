@@ -9,9 +9,9 @@ public interface GuestDao {
 
     Collection<Guest> readAll();
 
-    void update(Guest original, Guest updated);
+    void update(int id, Guest updated);
 
-    void delete(Guest guest);
+    void delete(int id);
 
     Guest findById (int id);
 

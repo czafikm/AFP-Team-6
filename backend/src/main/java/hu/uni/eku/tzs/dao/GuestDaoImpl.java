@@ -4,7 +4,6 @@ import hu.uni.eku.tzs.dao.entity.GuestEntity;
 import hu.uni.eku.tzs.model.Guest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.Collection;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -26,18 +25,25 @@ public class GuestDaoImpl implements GuestDao{
     }
 
     @Override
-    public void update(Guest original, Guest updated) {
-
+    public void update(int id, Guest updated) {
+        GuestEntity update = repo.findById(id);
+        if (update != null) {
+            update.setId(updated.getId());
+            repo.save(update);
+        }
     }
 
     @Override
-    public void delete(Guest guest) {
-
+    public void delete(int id) {
+    GuestEntity result = repo.findById(id);
+    if (result != null)
+    {
+        repo.delete(result);
+    }
     }
 
     @Override
     public Guest findById(int id) {
-
         return GuestEntityModelConverter.entity2model(repo.findById(id));
     }
 

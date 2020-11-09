@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class WatchRecordRequestDto {
 
+    private int id;
     private int balance;
     private PaymentStatus paymentStatus;
 }

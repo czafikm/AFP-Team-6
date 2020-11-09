@@ -3,6 +3,7 @@ package hu.uni.eku.tzs.service;
 import hu.uni.eku.tzs.dao.GuestDao;
 import hu.uni.eku.tzs.model.Guest;
 import hu.uni.eku.tzs.service.exceptions.GuestAlreadyExistException;
+import hu.uni.eku.tzs.service.exceptions.GuestNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -33,4 +34,16 @@ public class GuestServiceImpl implements GuestService{
     public Collection<Guest> readAll() {
         return dao.readAll();
     }
+
+    @Override
+    public void update(int id, Guest updated) throws GuestNotFoundException {
+        dao.update(id,updated);
+    }
+
+    @Override
+    public void delete(int id) throws GuestNotFoundException {
+        dao.delete(id);
+    }
+
+
 }

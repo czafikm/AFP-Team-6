@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class GuestRecordRequestDto {
 
+    private int id;
     private String firstName;
     private String lastName;
     private byte guestAge;

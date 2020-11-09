@@ -28,13 +28,16 @@ public class WatchDaoImpl implements WatchDao{
     }
 
     @Override
-    public void update(Watch original, Watch updated) {
-
+    public void update(int id, Watch newWatch) {
+        WatchEntity update = repository.findById(id);
+            update.setId(newWatch.getId());
+            repository.save(update);
     }
 
     @Override
-    public void delete(Watch watch) {
-        
+    public void delete(int id) {
+        WatchEntity result = repository.findById(id);
+            repository.delete(result);
     }
 
     @Override
