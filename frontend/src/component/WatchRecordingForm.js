@@ -24,8 +24,8 @@ class WatchRecordingForm extends React.Component{
                 <label htmlFor={"balance"} >Balance</label>
                 <input type={"number"} id={"balance"} name={"balance"} value={this.state.balance} onChange={this.formOnChange}/>
                 <br/>
-                <label htmlFor={"paymentsat"}>Payment Status</label>
-                <input type={"text"} id={"paymentstat"} name={"paymentstat"} value={this.state.paymentStatus} onChange={this.formOnChange}/>
+                <label htmlFor={"paymentSatus"}>Payment Status</label>
+                <input type={"text"} id={"paymentStatus"} name={"paymentStatus"} value={this.state.paymentStatus} onChange={this.formOnChange}/>
                 <br/>
                 <button onClick={()=> actions.recordWatch(this.state)}>Submit</button>
             </div>
