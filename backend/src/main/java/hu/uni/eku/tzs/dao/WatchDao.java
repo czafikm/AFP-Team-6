@@ -9,9 +9,9 @@ public interface WatchDao {
 
     Collection<Watch> readAll();
 
-    void update(Watch original, Watch updated);
+    void update(int id, Watch updated);
 
-    void delete(Watch watch);
+    void delete(int id);
 
     Watch findById (int id);
 }

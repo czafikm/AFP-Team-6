@@ -5,6 +5,7 @@ import hu.uni.eku.tzs.controller.dto.GuestRecordRequestDto;
 import hu.uni.eku.tzs.model.Guest;
 import hu.uni.eku.tzs.service.GuestService;
 import hu.uni.eku.tzs.service.exceptions.GuestAlreadyExistException;
+import hu.uni.eku.tzs.service.exceptions.GuestNotFoundException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
@@ -30,7 +31,8 @@ public class GuestController {
     @ApiOperation(value = "Record guest")
     public void record(@RequestBody GuestRecordRequestDto request) {
         log.info("Recording new Guest ({},{},{},{})", request.getFirstName(), request.getLastName(), request.getGuestAge(), request.getEmail());
-        try {
+        try
+        {
             service.record(new Guest(
                     0,
                     request.getFirstName(),
@@ -38,7 +40,9 @@ public class GuestController {
                     request.getGuestAge(),
                     request.getEmail()
             ));
-        } catch (GuestAlreadyExistException e) {
+        }
+        catch (GuestAlreadyExistException e)
+        {
             log.info("Guest ({},{},{},{}) is already exists! Message: {}", request.getFirstName(), request.getLastName(), request.getGuestAge(), request.getEmail(), e.getMessage());
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
@@ -50,8 +54,8 @@ public class GuestController {
     @GetMapping(value = {"/list"}, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     @ApiOperation(value= "Guest list")
-    public Collection<GuestDto> query() {
-
+    public Collection<GuestDto> query()
+    {
          return service.readAll().stream().map(model ->
                  GuestDto.builder()
          .id(model.getId())
@@ -60,5 +64,35 @@ public class GuestController {
          .guestAge(model.getGuestAge())
          .email(model.getEmail())
          .build()).collect(Collectors.toList());
+    }
+
+    /*@PutMapping(value = {"/update/{id}"})
+    @ApiOperation(value = "Update Guest")
+    public void update(@PathVariable int id, @RequestBody GuestRecordRequestDto request) {
+        try
+        {
+            service.update(id, new Guest(request.getId(),request.getFirstName(), request.getLastName(),request.getGuestAge(), request.getLastName()));
+            log.info("Update Guest with id: {} -> (Firstname: {}, Lastname: {}, Age: {}, Email: {} )", id,request.getFirstName(), request.getLastName(), request.getGuestAge(), request.getEmail());
+        }
+        catch(GuestNotFoundException e)
+        {
+            log.info("Guest Not Found with this id: ({})",id);
+            throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
+        }
+    }*/
+
+    @DeleteMapping(value = {"/delete/{id}"})
+    @ApiOperation(value = "Delete Guest")
+    public void delete(@PathVariable int id) {
+        try
+        {
+            service.delete(id);
+            log.info("Guest successfully deleted with this id: {}",id);
+        }
+        catch (GuestNotFoundException e)
+        {
+            log.info("Guest Not Found with this id: ({})",id);
+            throw new ResponseStatusException(HttpStatus.CONFLICT, e.getMessage());
+        }
     }
 }
