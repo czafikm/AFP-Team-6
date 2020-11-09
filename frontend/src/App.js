@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import ComplexNumberRecordingForm from "./component/ComplexNumberRecordingForm";
 import ComplexNumberList from "./component/ComplexNumberList";
+import WatchRecordingForm from "./component/WatchRecordingForm";
 
 function App() {
   return (
@@ -9,8 +10,8 @@ function App() {
         <div className={"row"}>
             <div className={"col-md-3"}></div>
             <div className={"col-md-6"}>
-                <ComplexNumberRecordingForm/>
-                <ComplexNumberList/>
+
+                <WatchRecordingForm/>
             </div>
             <div className={"col-md-3"}></div>
         </div>
