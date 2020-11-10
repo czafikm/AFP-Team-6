@@ -23,7 +23,7 @@ export const recordWatch = ({balance,paymentStatus}) =>{
 
 export const fetchWatches = () =>{
 
-    axios.get('/watch/').then((resp)=>{
+    axios.get('/watch/list').then((resp)=>{
         dispatcher.dispatch({
             action : actionConstants.refresh,
             payload: resp.data
