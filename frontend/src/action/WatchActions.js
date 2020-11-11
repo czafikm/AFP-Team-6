@@ -30,3 +30,19 @@ export const fetchWatches = () =>{
         });
     })
 }
+
+export const deleteWatch = ({id}) =>{
+    axios.delete('/watch/delete/'+id)
+        .then(() => {
+            fetchWatches();
+            dispatcher.dispatch({action : actionConstants.clearError});
+        })
+        .catch((err) => {
+            dispatcher.dispatch({
+                action : actionConstants.showError,
+                payload: `${err.response.status}-${err.response.statusText}: ${err.response.data.message}`
+            });
+            fetchWatches();
+        });
+}
+

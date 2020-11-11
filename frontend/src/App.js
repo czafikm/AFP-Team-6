@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.scss';
-import ComplexNumberRecordingForm from "./component/ComplexNumberRecordingForm";
-import ComplexNumberList from "./component/ComplexNumberList";
 import WatchRecordingForm from "./component/WatchRecordingForm";
 import WatchList from "./component/WatchList";
+import WatchDeleteForm from "./component/WatchDeleteForm";
 
 function App() {
   return (
@@ -11,9 +10,13 @@ function App() {
         <div className={"row"}>
             <div className={"col-md-3"}></div>
             <div className={"col-md-6"}>
-
+                <br/>
                 <WatchRecordingForm/>
+                <br/>
+                <WatchDeleteForm/>
+                <br/>
                 <WatchList/>
+                <br/>
             </div>
             <div className={"col-md-3"}></div>
         </div>
