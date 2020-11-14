@@ -1,15 +1,18 @@
 import React from 'react';
 import {default as store} from '../store/WatchStore'
-import WatchListItem from "./WatchListItem";
+import { Card, Table} from "react-bootstrap";
+import {fetchWatches} from "../action/WatchActions";
 
 class WatchList extends React.Component{
 
     constructor(props) {
         super(props);
-        this.state = {watches : []};
-        this._updateState = this._updateState.bind(this);
-    }
+        this.state = {watches : [],
+            date: new Date().toLocaleDateString()}
 
+        this._updateState = this._updateState.bind(this);
+        fetchWatches();
+    }
 
     componentDidMount() {
         store.addChangeListener(this._updateState);
@@ -26,13 +29,41 @@ class WatchList extends React.Component{
 
     render() {
         return(
-            <div>
-                {this.state.watches.map(({id, balance, paymentStatus}, index)=>{
-                    return(
-                        <WatchListItem key={index} id={id} balance={balance} paymentStatus={paymentStatus}/>
-                    );
-                })}
-            </div>
+
+                <div>
+                    <Card className="border border-dark bg-dark text-white">
+                        <Card.Header>
+                            <div style={{"float": "left"}} className="text-info">
+                                Watch List
+                            </div>
+                        </Card.Header>
+                        <Card.Body>
+
+                            <Table bordered hover striped variant="dark" id="productTable">
+                                <thead>
+                                <tr align="center">
+                                    <th>ID</th>
+                                    <th>Balance</th>
+                                    <th>PaymentStatus</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {this.state.watches.map(({id, balance, paymentStatus}, index)=> {
+                                   return(
+                                    <tr key={index} align="center">
+                                        <td>{id}</td>
+                                        <td>{balance}</td>
+                                        <td>{paymentStatus}</td>
+                                    </tr>);
+                                })}
+                                </tbody>
+                            </Table>
+                        </Card.Body>
+                        <Card.Footer>
+                            {this.state.date}
+                        </Card.Footer>
+                    </Card>
+                </div>
         );
     }
 }
