@@ -1,6 +1,7 @@
 import React from "react";
 import * as actions from '../action/WatchActions';
 import ErrorMessageWell from "./ErrorMessageWell";
+import {Card, Form, Button, Col} from "react-bootstrap";
 class WatchRecordingForm extends React.Component{
 
     constructor(props) {
@@ -20,14 +21,52 @@ class WatchRecordingForm extends React.Component{
     render() {
         return(
             <div>
-                <ErrorMessageWell/>
-                <label htmlFor={"balance"} >Balance</label>
-                <input type={"number"} id={"balance"} name={"balance"} value={this.state.balance} onChange={this.formOnChange}/>
                 <br/>
-                <label htmlFor={"paymentStatus"}>Payment Status</label>
-                <input type={"text"} id={"paymentStatus"} name={"paymentStatus"} value={this.state.paymentStatus} onChange={this.formOnChange}/>
                 <br/>
-                <button onClick={()=> actions.recordWatch(this.state)}>Submit</button>
+                <Card className="border border-dark bg-dark text-white">
+                    <Card.Header>
+                        <ErrorMessageWell/>
+                        <div style={{"float": "left"}} className="text-info">
+                            Add Watch
+                        </div>
+
+                    </Card.Header>
+                    <Form>
+                        <Card.Body>
+                            <Form.Row>
+                                <Form.Group as={Col} controlId={"formGridBalance"}>
+                                    <Form.Label>Balance</Form.Label>
+                                    <Form.Control required autoComplete="off"
+                                                  name="balance"
+                                                  type="number"
+                                                  value={this.state.balance}
+                                                  onChange={this.formOnChange}
+                                                  className="bg-dark text-white"
+                                                  placeholder="Enter Balance" />
+                                </Form.Group>
+                                <Form.Group as={Col} controlId={"formGridPaymentStatus"}>
+                                    <Form.Label>PaymentStatus</Form.Label>
+                                    <Form.Control required as="select"
+                                                  name="paymentStatus"
+                                                  type="text"
+                                                  value={this.state.paymentStatus}
+                                                  onChange={this.formOnChange}
+                                                  className="bg-dark text-white"
+                                                  placeholder="Enter PaymentStatus">
+                                        <option value="PAID">PAID</option>
+                                        <option value="NOT_PAID">NOT_PAID</option>
+                                    </Form.Control>
+                                </Form.Group>
+                            </Form.Row>
+                        </Card.Body>
+                        <Card.Footer>
+                            <Button disabled={this.state.balance === 0} size={"sm"} variant="success" type="submit" onClick={()=> actions.recordWatch(this.state)}>
+                                Submit
+                            </Button>
+                        </Card.Footer>
+                    </Form>
+                </Card>
+
             </div>
         );
     }

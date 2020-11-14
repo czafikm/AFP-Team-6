@@ -1,6 +1,7 @@
 import {EventEmitter} from 'events';
 import {default as dispatcher} from '../dispatcher/Dispatcher';
-import * as actionConstants from '../dispatcher/WatchActionConstants'
+import * as actionConstants from '../dispatcher/WatchActionConstants';
+import * as guestConstants from '../dispatcher/GuestActionConstants';
 
 class ErrorMessageStore extends EventEmitter{
 
@@ -34,4 +35,19 @@ dispatcher.register(({action})=>{
    if(action !== actionConstants.clearError) return;
    store._errorMsg = "";
    store.emitChage();
+});
+
+dispatcher.register(({action,payload})=>{
+    console.log({action : action, payload : payload});
+    if(action !== guestConstants.showError){
+        return;
+    }
+    store._errorMsg = payload;
+    store.emitChage();
+});
+
+dispatcher.register(({action})=>{
+    if(action !== guestConstants.clearError) return;
+    store._errorMsg = "";
+    store.emitChage();
 });

@@ -1,5 +1,6 @@
 import React from "react";
 import * as actions from '../action/GuestActions';
+import {Button, Card, Col, Form} from "react-bootstrap";
 class GuestDeleteForm extends React.Component{
 
     constructor(props) {
@@ -18,9 +19,31 @@ class GuestDeleteForm extends React.Component{
     render() {
         return(
             <div>
-                <label htmlFor={"id"} >Guest ID</label>
-                <input type={"number"} id={"id"} name={"id"} value={this.state.id} onChange={this.formOnChange}/>
-                <button onClick={()=> actions.deleteGuest(this.state)}>Delete</button>
+                <Card className="border border-dark bg-dark text-white">
+                    <Card.Header>
+                        <div style={{"float": "left"}} className="text-info">
+                            Delete Guest
+                        </div>
+                    </Card.Header>
+                    <Form>
+                        <Card.Body>
+                            <Form.Row>
+                                <Form.Group as={Col}>
+                                    <Form.Label>GuestID</Form.Label>
+                                    <Form.Control required autoComplete="off"
+                                                  name="id"
+                                                  id="id"
+                                                  type="number"
+                                                  value={this.state.id}
+                                                  onChange={this.formOnChange}
+                                                  className="bg-dark text-white"
+                                                  placeholder="Enter GuestID" />
+                                </Form.Group>
+                            </Form.Row>
+                            <Button disabled={this.state.id === 0} size={"sm"} variant="danger" onClick={()=> actions.deleteGuest(this.state)}>Delete</Button>
+                        </Card.Body>
+                    </Form>
+                </Card>
             </div>
         );
     }
