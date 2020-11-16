@@ -1,6 +1,7 @@
 import React from "react";
 import * as actions from '../action/WatchActions';
 import {Button, Card, Col, Form} from "react-bootstrap";
+import ErrorMessageWell from "./ErrorMessageWell";
 class WatchDeleteForm extends React.Component{
 
     constructor(props) {
@@ -24,6 +25,7 @@ class WatchDeleteForm extends React.Component{
                         <div style={{"float": "left"}} className="text-info">
                            Delete Watch
                         </div>
+                        <ErrorMessageWell/>
                     </Card.Header>
                     <Form>
                <Card.Body>

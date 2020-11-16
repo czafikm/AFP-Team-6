@@ -27,10 +27,10 @@ class GuestRecordingForm extends React.Component{
                 <br/>
                 <Card className="border border-dark bg-dark text-white">
                     <Card.Header>
+                        <ErrorMessageWell/>
                             <div style={{"float": "left"}} className="text-info">
                                 Add Guest
                             </div>
-                        <ErrorMessageWell/>
                         </Card.Header>
                     <Form>
                         <Card.Body>

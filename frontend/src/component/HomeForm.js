@@ -8,11 +8,12 @@ export default class HomeForm extends Component {
                 <br/>
             <br/>
                 <br/>
-            <Jumbotron className="bg-light text-black text-center border border-secondary">
+            <Jumbotron className="bg-light text-black text-center border border-secondary ">
                 <h1>Wellness Budget Project</h1>
                 <blockquote className={"blockquote mb-0"}>
                     <p>
-                        Created By: AFP-TEAM-6
+                        This web application assists for a wellness service
+                        in a way that helps manage guests and the watches.
                     </p>
                 </blockquote>
             </Jumbotron>

@@ -53,8 +53,8 @@ class WatchRecordingForm extends React.Component{
                                                   onChange={this.formOnChange}
                                                   className="bg-dark text-white"
                                                   placeholder="Enter PaymentStatus">
-                                        <option value="PAID">PAID</option>
                                         <option value="NOT_PAID">NOT_PAID</option>
+                                        <option value="PAID">PAID</option>
                                     </Form.Control>
                                 </Form.Group>
                             </Form.Row>
