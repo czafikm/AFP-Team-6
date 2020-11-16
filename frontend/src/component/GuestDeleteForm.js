@@ -1,6 +1,7 @@
 import React from "react";
 import * as actions from '../action/GuestActions';
 import {Button, Card, Col, Form} from "react-bootstrap";
+import ErrorMessageWell from "./ErrorMessageWell";
 class GuestDeleteForm extends React.Component{
 
     constructor(props) {
@@ -24,6 +25,7 @@ class GuestDeleteForm extends React.Component{
                         <div style={{"float": "left"}} className="text-info">
                             Delete Guest
                         </div>
+                        <ErrorMessageWell/>
                     </Card.Header>
                     <Form>
                         <Card.Body>

@@ -8,9 +8,9 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import {Row, Container,Col} from "react-bootstrap";
 import GuestDeleteForm from "./component/GuestDeleteForm";
 import WatchDeleteForm from "./component/WatchDeleteForm";
-import ErrorMessageWell from "./component/ErrorMessageWell";
 import WatchRecordingForm from "./component/WatchRecordingForm";
 import HomeForm from "./component/HomeForm";
+import Footer from "./component/Footer";
 
 
 function App() {
@@ -34,7 +34,6 @@ function App() {
                               <br/>
                               <WatchList/>
                               <br/>
-                              <ErrorMessageWell/>
                               <WatchDeleteForm/>
                               <br/>
                           </Route>
@@ -47,7 +46,6 @@ function App() {
                               <br/>
                               <GuestList/>
                               <br/>
-                              <ErrorMessageWell/>
                               <GuestDeleteForm/>
                               <br/>
                           </Route>
@@ -55,9 +53,9 @@ function App() {
                   </Col>
               </Row>
           </Container>
+          <Footer/>
       </Router>
       </div>
-
   );
 }
 
