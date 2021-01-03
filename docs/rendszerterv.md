@@ -35,6 +35,13 @@ A rendszer fejlesztése HTML/CSS valamint JavaScript és java ,Spring Boot segí
 
 ## Fizikai környezet
 
+A rendszer fejlesztése HTML/CSS valamint JavaScript és Java,Spring Boot segítségével történik.
+Mely nem más keretrendszert használt mint a Spring Boot-ot.
+A weblap felépítése, valamint dizájnolása a HTML/CSS nyelv implementálásával valósítandó meg.
+A weboldal használatához egy egyszerű böngészőre van szükség.
+Az adatbázishoz csatlakozás,bejelentkezés, adminisztrátori jogosultság felismertetése, stb. pedig a Java/JavaScript-el.
+A rendszert bármilyen operációs rendszeren és böngészőben haszálható lesz, bár  telefonról nem lenne képes rá.
+
 ## Architekturális terv
 
 ## Adatbázis terv
