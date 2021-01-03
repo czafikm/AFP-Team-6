@@ -101,8 +101,6 @@ objektumokkal kommunikál.
 
 ## Tesztterv
 
-﻿# Tesztelési terv
-
 |                |Ellenőrzendő                     |
 |----------------|---------------------------------|
 |        1       |`Backend végpontok elérhetősége` |
