@@ -33,6 +33,40 @@ A rendszer fejlesztése HTML/CSS valamint PHP, JavaScript és Java ,Spring Boot 
 
 ## Funkcionális terv
 
+Rendszerszereplők
+- recepciós
+- felnőtt vendég
+- gyerek vendég
+
+Rendszer használati esetek
+- Recepciós
+	-> Felvehet új vendéget
+	-> Összerendelheti a vendéget egy órával
+	-> Lekérheti egy óra használati adatait
+	-> Lekérheti a számlát
+	-> Nullázhatja az óra adatait
+	
+- Felnőtt vendég
+	-> Érkezéskor megadja az adatait és átveszi az órát
+	-> Az étteremben vásárolhat ételt, amelyet az óra lehúzásával rögzít
+	->A bárban vásárolhat italt, amelyet az óra lehúzásával rögzít
+	-> A wellness részlegben használhatja a szaunát és a medencét is, az óra lehúzásával léphet be
+	-> Távozáskor fizeti a számlát az óra adatai alapján és leadja az órát
+	
+- Gyerek vendég
+	-> Érkezéskor átveszi az órát
+	-> Az étteremben vásárolhat ételt, amelyet az óra lehúzásával rögzít
+	->A bárban vásárolhat italt, csak alkoholmenteset, (az óra lehúzásakor jelez a pultosnak, hogy kiskorú a tulajdonosa)
+	-> A wellness részlegben használhatja a szaunát (a medencét csak szülői engedéllyel) az óra lehúzásával léphet be
+	-> Távozáskor leadja az órát
+	
+	Menüpontok:
+		- HOME
+		- Add Watch
+		- Watch List
+		- Add Watch
+		- Guest List
+
 ## Fizikai környezet
 
 A rendszer fejlesztése HTML/CSS valamint PHP, JavaScript és Java,Spring Boot segítségével történik.
