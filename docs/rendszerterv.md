@@ -101,4 +101,20 @@ objektumokkal kommunikál.
 
 ## Tesztterv
 
+﻿# Tesztelési terv
+
+|                |Ellenőrzendő                     |
+|----------------|---------------------------------|
+|        1       |`Backend végpontok elérhetősége` |
+|        2       |`Adat felvitele watch-hoz`       |
+|        3       |`Adat lekérdezése watch-ról `    |
+|        4       |`Watch törlése                `  |
+|        5       |`Adat felvitele guest-hez`                |
+|        6       |`Adat lekérdezése guest-ről `             |
+|        7       |`Guest törlése                `           |
+|        8       |`Frontend elérhetőségének ellenőrzése `   |
+|        9       |`Menüpontok működésének ellenőrzése` |
+|        10      |`Adatok felvitelének tesztelése a frontenden` |
+|       11       |`Adatbázisban lévő adatok megjeleníthetőségének ellenőrzése` |
+|       12       |`Törlés frontenden keresztül`|
 
