@@ -1,5 +1,5 @@
 ﻿# Rendszerterv
->Welness Budget Project
+>Wellness Budget Project
 >AFP-Team-6
 
 ## A rendszer célja
@@ -11,6 +11,16 @@ A vendégeket két csoportba sorolhatjuk, amelyet az órán is rögzítünk: gye
 A gyerek korlátozottan használhat egyes szolgáltatásokat, pl. nem vehet alkoholos italt.
 
 ## Projekt terv
+
+A projektet web alkalmazásként  fejlesztjük front- és backend segítségével. Az elkülönített feladatokon más-más emberek dolgoznak.
+Backend fejlesztése Java segítségével.
+Frontend fejlesztése JavaScript segítségével.
+
+Frontend felelősök:
+-  A feladat célja, hogy a weblap könnyen kezelhető legyen a felhasználók és adminisztrátorok számára. 
+
+Backend felelősök:
+- Feladatuk az adatbázishoz való csatlakozás biztosítása, illetve a benne kezelt műveletek megírása.
 
 ## Üzleti folyamatok modellje
 
