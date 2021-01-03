@@ -4,7 +4,9 @@
 
 ## Bevezetés
 
-
+Egy készpénz nélküli fizetést megvalósító rendszert fejlesztünk egy wellness hotel számára. A vendégeknek a hotelben tartózkodás idején nem szükséges készpénzt tartaniuk maguknál. A szolgáltatásokat a bejelentkezéskor kapott óra segítségével tudják igénybe venni, amely rögzít minden egyes használatot. A számlát a kijelentkezéskor tudják a vendégek kiegyenlíteni készpénzes vagy bankkártyás fizetési módon.
+A rendszert a recepciós kezeli.
+A rendszer megkönnyíti és kényelmesebbé teszi a hotel vendégei számára a fizetős szolgáltatások használatát, illetve segít betartani a gyerekekre vonatkozó korlátozásokat (pl. nem vehetnek alkoholos italt).
 
 ## Jelenlegi helyzet
 
