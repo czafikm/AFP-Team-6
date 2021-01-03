@@ -4,17 +4,26 @@
 
 ## Bevezetés
 
-Egy készpénz nélküli fizetést megvalósító rendszert fejlesztünk egy wellness hotel számára. A vendégeknek a hotelben tartózkodás idején nem szükséges készpénzt tartaniuk maguknál. A szolgáltatásokat a bejelentkezéskor kapott óra segítségével tudják igénybe venni, amely rögzít minden egyes használatot. A számlát a kijelentkezéskor tudják a vendégek kiegyenlíteni készpénzes vagy bankkártyás fizetési módon.
+Egy készpénz nélküli fizetést megvalósító rendszert fejlesztünk egy wellness hotel számára. A vendégeknek a hotelben tartózkodás idején nem szükséges
+készpénzt tartaniuk maguknál. A szolgáltatásokat a bejelentkezéskor kapott óra segítségével tudják igénybe venni, amely rögzít minden egyes használatot. 
+A számlát a kijelentkezéskor tudják a vendégek kiegyenlíteni készpénzes vagy bankkártyás fizetési módon.
 A rendszert a recepciós kezeli.
-A rendszer megkönnyíti és kényelmesebbé teszi a hotel vendégei számára a fizetős szolgáltatások használatát, illetve segít betartani a gyerekekre vonatkozó korlátozásokat (pl. nem vehetnek alkoholos italt).
+A rendszer megkönnyíti és kényelmesebbé teszi a hotel vendégei számára a fizetős szolgáltatások használatát, 
+illetve segít betartani a gyerekekre vonatkozó korlátozásokat (pl. nem vehetnek alkoholos italt).
 
 ## Jelenlegi helyzet
 
-The watches and the readers are already installed and they communicate with the system via Internet. These devices usually can process the response and approve or reject the transaction. Some of these devices can print simple reponse messages about the error. For example, if a childre wants to use the sauna then the entrace gate rejects their request. In another scenario, if a 17- years-old person wants to pay for alcohol then the bartender would recieveed a message about the restriction.
+A hotelünk jelenleg készpénzes és bankkártyás fizetési lehetőséget biztosít az egyes szolgáltatásokhoz. 
+A wellnes részleg előre megváltott karsszalaggal használható a bárban és az étteremben készpénzzel, illetve bankkártyával lehet fizetni. 
+Ez a megoldás viszont kényelmetlen egyes vendégeink számára, hiszen folyamatosan maguknál kell tartaniuk pénztárcájukat. 
+A technikai háttér már biztosított. Az órák már rendelkezésre állnak, illetve az olvasók is beszerelésre kerültek. 
+Ezek működtetéséhez lenne szükségünk a megfelelő szoftverre. 
+A terminálok egy része képes üzenetek közvetítésére, kiírására is. Pl. ha egy kiskorú alkoholt szeretne venni, a pultos egy figyelmeztető üzenetet kap, 
+hogy ne adja ki az italt vagy ha egy gyermek egyedül szeretné használni a medencéket, a kapu nem engedi át.
 
 ## Vágyálom rendszer
 
-Our Wellness hotel wants to introduce a cashless system where our guests can buy services easily. The guests will get a watch which identify them. When many guests arrive they get their own watches but they will pay in a single bill. So the watch identies the customer but multiple customers can belong to a bill. When the guests leave, the give back the wathces that will be assign to new guests. Guests can pay for various services by simply touching the terminal similar to PayPass. We would like to monitor their consumption and give detailed invoice if needed. In addition, we would like to limit available services for guests so some service would be unavailabe for certain guests. For example, children could not by alcohol. Some services are provided by our employees for exmaple the drinks are served by a bartender in the bar. While other services can be accessed via its entrance such as the sanua.
+A Wellness hotelünk szeretne egy készpénz mentes rendszert, amellyel a vendégeink könnyen igényevehetik a fizetős szolgáltatásainkat. A vendégek egy órát kapnak, amely azonosítja őket. Amikor a vendégek távoznak, visszaadják az órát, amely ezután újra kiadható lesz egy másik vendégnek. A vendégek az óra terminálhoz való érintésével vehetik igénybe a szolgáltatásokat, hasonlóan mint a PayPass rendszer. Szeretnénk nyomonkövetni a fogyasztásukat és erről számlát is készíteni, amenyiben igénylik. Szeretnénk bizonyos szolgáltatásokat korlátozni adott vendégcsoport esetén (pl. kiskorú ne vehessen alkoholt). Néhány szolgáltatás az alkalmazottak által biztosított (pl. az italokat a pultos adja ki a bárban), és néhány szolgáltatáshoz beléptetés szükséges (pl. szauna).
 
 ## Igényelt üzleti folyamatok 
 
