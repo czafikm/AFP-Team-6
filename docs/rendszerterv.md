@@ -78,6 +78,11 @@ A rendszert bármilyen operációs rendszeren és böngészőben haszálható le
 
 ## Architekturális terv
 
+A rendszerhez szükség van egy adatbázis szerverre, ebben az esetben
+MySql-t használunk. A kliens oldali programokat egy php alapú REST api
+szolgálja ki, ez csatlakozik az adatbázis szerverhez. A kliensekkel JSON
+objektumokkal kommunikál.
+
 ## Adatbázis terv
 
 |    ID     |    Description                               											| 
@@ -95,3 +100,5 @@ A rendszert bármilyen operációs rendszeren és böngészőben haszálható le
 |    F11    | Enum: Roles, Minden role rendelkezik saját funkciókkal.										|
 
 ## Tesztterv
+
+
