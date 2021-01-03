@@ -40,6 +40,10 @@ Fizetés után az órát alapállapotba helyezi.
 
 ## Rendszerre vonatkozó szabályok
 
+A web felület szabványos eszközökkel készüljön, html/css/java/javascript.
+A biztonságos fizetéses rendszer megoldása.
+A felhasználókat azonosító web oldalak esetében szükséges jogszabályokat be kell tartani: GDPR.
+
 ## Követelmény lista 
 
 ## Fogalom szótár
