@@ -49,3 +49,9 @@ Mivel képeket nem lehetséges beszúrni , ezért egy driveba lettek feltöltve.
 https://drive.google.com/drive/folders/1H4-clpWIFFyiWhjuF3P1GDWBlcLjBzFO?usp=sharing
 
 ## Forgatókönyvek
+
+A kezdőlapra érkezve megtaláljuk a menüpontokat melyek tartalmazzák az óra hozzáadását, óra listázását,guest hozzáadását, guest listázását,Home oldal,a weboldal csapatot akik készítették.
+Az óra hozzáadása menüpontra kattintva tudunk hozzáadni összeget és ,hogy az fizetve volt illetve nem.
+Az óra listázása menüpontra kattintva tudunk törölni, illetve egy táblázatban hogy épp kik azok akiknek történt valami tranzakciója.
+A guest hozzáadása menüpontra kattintva tudunk guest-et hozzáadni aminek megtudjuk adni , vezetéknév , keresztnév , életkor, és email elérhetőségünket, vagyis ezáltal bekerülni az adatbázisrendszerébe.
+A guest listázása menüpontra kattintva tudunk törölni, illetve egy táblázatban hogy épp kik azok akik szerepelnek benne.
