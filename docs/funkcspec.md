@@ -22,6 +22,26 @@ A recepciós a felületen tud új órát hozzáadni a rendszerhez. A recepciós 
 
 ## Használati esetek
 
+![](https://www.planttext.com/api/plantuml/img/RP9DZeCm38NtEKMMiA07YAfHRrAPn825YL5-fgggkVk42dM2XftvdktdF76B2KBA2ol68UaaEj0u9Uqee4qaNgcj03yowbBXki6NQY8cRLdih1qc88wjQWB-qHuOlCL2LtZgdfXRzLClw_Fp7cN1D94VNmUNSbCEu5EnALrw477RS3KBOTU0hKnITjTVUWY8sWNoypPtiCqHxn73DrcCjUi3sMCig2aTEaBsqExrWvQbtBYAyBxEV9AWc4pNVPt5yR_fD1y3BlDRFoHIyVha2bV17gAuNYvc9cVC8A4dvz3NRpfH3xxNhdlhgdRzm1jwj_qilm00)
+
+_Recepciós:_
+- beállítja az óra adatait
+- lekérdezi távozáskor a számlát
+- visszaállítja az órát alapállapotba
+
+_Felnőtt:_
+- vásárolhat az étteremben
+- vehet italt (alkoholosat is) a bárban
+- használhatja a medencéket
+- használhatja a szaunát
+- fizeti a számlát
+
+_Gyerek:_
+- vásárolhat az étteremben
+- vehet italt a bárban, de csak ALKOHOLMENTESET
+- használhatja a szaunát
+
+
 ## Képernyő tervek
 
 Mivel képeket nem lehetséges beszúrni , ezért egy driveba lettek feltöltve.
