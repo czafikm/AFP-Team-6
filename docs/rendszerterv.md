@@ -26,6 +26,11 @@ Backend felelősök:
 
 ## Követelmények
 
+A rendszer fejlesztése HTML/CSS valamint JavaScript és java ,Spring Boot segítségével történik.
+	A weblap felépítése, valamint dizájnolása a HTML/CSS nyelv implementálásával valósítandó meg. Az adatbázishoz csatlakozás,
+	bejelentkezés, adminisztrátori jogosultság felismertetése, stb. pedig a java/JavaScript-el.
+	A weboldal használatához egy egyszerű böngészőre van szükség.
+
 ## Funkcionális terv
 
 ## Fizikai környezet
