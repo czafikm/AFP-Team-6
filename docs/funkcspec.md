@@ -24,4 +24,8 @@ A recepciós a felületen tud új órát hozzáadni a rendszerhez. A recepciós 
 
 ## Képernyő tervek
 
+Mivel képeket nem lehetséges beszúrni , ezért egy driveba lettek feltöltve.
+
+https://drive.google.com/drive/folders/1H4-clpWIFFyiWhjuF3P1GDWBlcLjBzFO?usp=sharing
+
 ## Forgatókönyvek
