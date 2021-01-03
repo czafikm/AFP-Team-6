@@ -59,7 +59,7 @@ A felhasználókat azonosító web oldalak esetében szükséges jogszabályokat
 - K11 Az órával természetesen képesek vagyunk vásárolni is ami terheli az eszközön lévő számlánkat
 
 ## Fogalom szótár
-|                |Fogalom                  |Mayarul          | Magyarázat|
+|                |Fogalom                  |Magyarul          | Magyarázat|
 |----------------|-------------------------|-----------------|---------|
 |        1       |SQL          |strukturált lekérdezőnyelv  |relációs adatbázis-kezelők lekérdezési nyelve    |
 |        2       |HTML :HyperText Makeup Language|hiperszöveges jelölőnyelv  |weboldalak készítéséhez kifejlesztett leírónyelv.		|
