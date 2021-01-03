@@ -29,6 +29,15 @@ its entrance such as the sanua.
 
 ## Igényelt üzleti folyamatok 
 
+A recepciós a felületen tud új órát hozzáadni a rendszerhez.
+A recepciós a felületen tud új vendéget hozzáadni a rendszerhez.
+Az óra hozzárendelhető egy vendéghez.
+Attól függően, hogy az óra tulajdonosa gyerek vagy felnőtt, különböző szolgáltatásokat vehet igénybe
+(pl. gyerek nem vehet alkoholt a bárban, és nem használhatja a szaunát).
+Az óra rögzíti az igényevett szolgáltatásokat.
+A távozáskor a recepciós le tudja kérdezni az óra birtokosa által igénybevett szolgáltatásokat és a fizetendő összeget.
+Fizetés után az órát alapállapotba helyezi.
+
 ## Rendszerre vonatkozó szabályok
 
 ## Követelmény lista 
