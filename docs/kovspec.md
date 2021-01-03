@@ -59,3 +59,10 @@ A felhasználókat azonosító web oldalak esetében szükséges jogszabályokat
 - K11 Az órával természetesen képesek vagyunk vásárolni is ami terheli az eszközön lévő számlánkat
 
 ## Fogalom szótár
+|                |Fogalom                  |Mayarul          | Magyarázat|
+|----------------|-------------------------|-----------------|---------|
+|        1       |SQL          |strukturált lekérdezőnyelv  |relációs adatbázis-kezelők lekérdezési nyelve    |
+|        2       |HTML :HyperText Makeup Language|hiperszöveges jelölőnyelv  |weboldalak készítéséhez kifejlesztett leírónyelv.		|
+|        3       |CSS :Cascading Style Sheets             |Egymásba ágyazott stílusalapok |weboldalak külleméhez kifejlesztett stílusleíró nyelv    |
+|        4       |Front-End          | |Egy adott rendszer legfelsőbb, a felhasználóval kapcsolatot taró rétege, amelynek feladata a rendszerből kijutó adatok megjelenítése, prezentálása, illetve a bejövő adatok fogadása.    |
+|        5       |Back-End            |    |Egy adott rendszer alsóbb rétege, aminek feladata a front-end réteg felől érkező adatok feldolgozása, valamint a keletkezett eredmény front-end számára történő visszajuttatása.		|
