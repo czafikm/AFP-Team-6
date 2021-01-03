@@ -80,4 +80,18 @@ A rendszert bármilyen operációs rendszeren és böngészőben haszálható le
 
 ## Adatbázis terv
 
+|    ID     |    Description                               											| 
+|-----------|-----------------------------------------------------------------------------------------------------------------------------------|
+|    F1     | UUID: ID, String: GuestName, Byte: GuestAge, Uint: Balance  									|
+|    F2     | List: Purchases, Óra ID lekérése, majd  Purchases lekérdezése.    								| 
+|    F3     | List: LogHistory, Egyes funkciói üzenetei egy listában tárolódnak.								| 
+|    F4     | Visszadja az órához tartozó Balance értékét az ID alapján. 									| 
+|    F5     | Bool: IsPaid, Amint megtörtént a fizetés(IsPaid = True), az óra Balance mezőjét visszaállítjuk alapértelmezettre. (0 Ft) 		|  
+|    F6     | Az óra GuestAge mezőjének értéke alapján a vendég különböző szolgáltatásokat tudd igénybe venni.					|
+|    F7     | Amint meghívjuk a Services enum egy értékét, a hozzátartozó értékkel terheli a számlánkat. 					|
+|    F8     | A Leave metódus meghívása után az óra Balance mező megfelelő értéket kell kifizetnünk. 						|
+|    F9     | Bool: IsLeave, Amint az értéke True-ra változik meghívódik automatikusan a Payment metódus.					|
+|    F10    | Enum: ServiceList, Minden enum értékhez tartozik egy ár, amely csak a megfelelő korral(GuestAge) vehető igénybe.			|
+|    F11    | Enum: Roles, Minden role rendelkezik saját funkciókkal.										|
+
 ## Tesztterv
