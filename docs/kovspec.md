@@ -46,16 +46,16 @@ A felhasználókat azonosító web oldalak esetében szükséges jogszabályokat
 
 ## Követelmény lista 
 
-K1 Könnyen átlátható kezelő felület
-K2 Reszponzív dizájn
-K3 Egyszerű megoldás a fizetéshez
-K4 Könnyen üzemeltethető rendszer
-K5 Minden szolgáltatáshoz tartozik egy ár
-K6 Minden szerepkör rendelkezik különböző funkciókkal
-K7 Az óra leadásást követően kikell fizetnünk a keletkezett költségeket
-K8 Az óra birtokosa különböző szolgáltatásokhoz fér hozzá az életkora alapján
-K9 Amint a vendég leadja az óráját, akkor a rajta található egyenleg nullázódik
-K10 A vendég által igénybe vett szolgáltatások listája
-K11 Az órával természetesen képesek vagyunk vásárolni is ami terheli az eszközön lévő számlánkat
+- K1 Könnyen átlátható kezelő felület
+- K2 Reszponzív dizájn
+- K3 Egyszerű megoldás a fizetéshez
+- K4 Könnyen üzemeltethető rendszer
+- K5 Minden szolgáltatáshoz tartozik egy ár
+- K6 Minden szerepkör rendelkezik különböző funkciókkal
+- K7 Az óra leadásást követően kikell fizetnünk a keletkezett költségeket
+- K8 Az óra birtokosa különböző szolgáltatásokhoz fér hozzá az életkora alapján
+- K9 Amint a vendég leadja az óráját, akkor a rajta található egyenleg nullázódik
+- K10 A vendég által igénybe vett szolgáltatások listája
+- K11 Az órával természetesen képesek vagyunk vásárolni is ami terheli az eszközön lévő számlánkat
 
 ## Fogalom szótár
